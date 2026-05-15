@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import NextImage from "next/image";
 import { motion } from "framer-motion";
 import { Lock, User, ArrowRight, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -53,7 +53,7 @@ export default function AdminLogin() {
             {/* Logo & Header */}
             <div className="text-center mb-10">
               <div className="relative h-16 w-16 mx-auto mb-6 bg-brand-black p-3 rounded-2xl shadow-lg">
-                <Image 
+                <NextImage 
                   src="/logo.png" 
                   alt="Clothbeam Logo" 
                   fill 

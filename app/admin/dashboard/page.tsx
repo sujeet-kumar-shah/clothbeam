@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import NextImage from "next/image";
 import { 
   LayoutDashboard, 
   Package, 
@@ -287,7 +287,7 @@ function ProductsContent({ products, onAddClick }: { products: any[], onAddClick
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 bg-gray-100 rounded-lg shrink-0 relative overflow-hidden">
                       {product.images.split(',')[0] && (
-                        <Image src={product.images.split(',')[0]} alt={product.name} fill className="object-cover" sizes="40px" />
+                        <NextImage src={product.images.split(',')[0]} alt={product.name} fill className="object-cover" sizes="40px" />
                       )}
                     </div>
                     <span className="font-bold text-brand-black">{product.name}</span>
@@ -326,7 +326,7 @@ function CategoriesContent({ categories, onAddClick }: { categories: any[], onAd
         ) : categories.map((cat) => (
           <div key={cat.id} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 group hover:border-brand-gold transition-all">
             <div className="h-40 bg-gray-50 rounded-2xl mb-4 overflow-hidden relative">
-               {cat.image && <Image src={cat.image} alt={cat.name} fill className="object-cover" sizes="300px" />}
+               {cat.image && <NextImage src={cat.image} alt={cat.name} fill className="object-cover" sizes="300px" />}
             </div>
             <h3 className="font-heading text-xl font-bold mb-1">{cat.name}</h3>
             <p className="text-sm text-gray-500 mb-4 line-clamp-2">{cat.description || `Collection of ${cat.name}`}</p>
