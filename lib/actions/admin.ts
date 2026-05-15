@@ -70,3 +70,10 @@ export async function getProducts() {
     orderBy: { createdAt: "desc" },
   });
 }
+
+export async function getProductById(id: string) {
+  return await prisma.product.findUnique({
+    where: { id },
+    include: { category: true },
+  });
+}
