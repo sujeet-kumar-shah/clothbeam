@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import NextImage from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Heart, Search, ShoppingBag } from "lucide-react";
@@ -41,7 +41,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <Heart className="h-4 w-4" />
         </button>
 
-        <Image
+        <NextImage
           src={product.image}
           alt={product.name}
           fill

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import NextImage from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
@@ -24,7 +24,7 @@ export default function HomeContent({ categories, featuredProducts }: HomeConten
         {/* Hero Section */}
         <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-brand-black">
           <div className="absolute inset-0 z-0">
-            <Image
+            <NextImage
               src="https://picsum.photos/seed/hero/2000/1200"
               alt="Premium Fashion"
               fill
@@ -101,7 +101,7 @@ export default function HomeContent({ categories, featuredProducts }: HomeConten
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Link href={`/collection?category=${category.id}`} className="group block relative overflow-hidden rounded-2xl aspect-[4/5]">
-                    <Image
+                    <NextImage
                       src={`https://picsum.photos/seed/${category.id}/600/800`}
                       alt={category.name}
                       fill
@@ -198,7 +198,7 @@ export default function HomeContent({ categories, featuredProducts }: HomeConten
                 transition={{ duration: 0.8 }}
                 className="relative h-[600px] rounded-2xl overflow-hidden"
               >
-                <Image
+                <NextImage
                   src="https://picsum.photos/seed/store/1000/800"
                   alt="Store Interior"
                   fill

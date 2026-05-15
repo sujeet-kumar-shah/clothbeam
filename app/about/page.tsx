@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import NextImage from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
@@ -42,7 +42,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="relative aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
             >
-              <Image
+              <NextImage
                 src="https://picsum.photos/seed/legacy/1000/1200"
                 alt="Clothbeam Store"
                 fill
@@ -115,7 +115,7 @@ export default function About() {
                 </div>
               </div>
               <div className="relative h-[400px] lg:h-auto">
-                <Image
+                <NextImage
                   src="https://picsum.photos/seed/boutique/1000/1000"
                   alt="Premium Store Interior"
                   fill

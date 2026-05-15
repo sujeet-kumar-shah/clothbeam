@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import NextImage from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Heart, Check, Truck, Shield, MessageCircle, ArrowLeft } from "lucide-react";
@@ -40,7 +40,7 @@ export default function ProductDetailContent({ product }: ProductDetailContentPr
                 animate={{ opacity: 1 }}
                 className="relative aspect-[3/4] md:aspect-square bg-brand-beige/20 rounded-2xl overflow-hidden"
               >
-                <Image
+                <NextImage
                   src={product.images[activeImage]}
                   alt={product.name}
                   fill
@@ -58,7 +58,7 @@ export default function ProductDetailContent({ product }: ProductDetailContentPr
                       onClick={() => setActiveImage(idx)}
                       className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-colors ${activeImage === idx ? 'border-brand-gold' : 'border-transparent hover:border-brand-beige'}`}
                     >
-                      <Image src={img} alt={`Thumbnail ${idx}`} fill className="object-cover" sizes="100px" />
+                      <NextImage src={img} alt={`Thumbnail ${idx}`} fill className="object-cover" sizes="100px" />
                     </button>
                   ))}
                 </div>
