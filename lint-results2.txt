@@ -1,0 +1,33 @@
+
+C:\Users\shahs\Documents\clothbeam\app\contact\page.tsx
+    4:25  warning  'Mail' is defined but never used                                 @typescript-eslint/no-unused-vars
+   33:17  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  160:14  error    'Image' is not defined                                           react/jsx-no-undef
+
+C:\Users\shahs\Documents\clothbeam\app\page.tsx
+  106:33   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  259:83   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  259:161  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\shahs\Documents\clothbeam\app\product\[id]\page.tsx
+  7:17  warning  'Share2' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shahs\Documents\clothbeam\components\ui\carousel.tsx
+  98:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shahs\Documents\clothbeam\components\ui\carousel.tsx:98:5
+   96 |   React.useEffect(() => {
+   97 |     if (!api) return
+>  98 |     onSelect(api)
+      |     ^^^^^^^^ Avoid calling setState() directly within an effect
+   99 |     api.on("reInit", onSelect)
+  100 |     api.on("select", onSelect)
+  101 |  react-hooks/set-state-in-effect
+
+✖ 8 problems (6 errors, 2 warnings)
